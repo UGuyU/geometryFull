@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int err(float x,float y,float r)
+float err(float x,float y,float r)
 {
 	if(x>=0 && y>=0 && r>=0)
 	{
@@ -19,12 +19,12 @@ int err(float x,float y,float r)
 
 int main()
 {
-	int x,y;
+	float x,y;
 	float r;
 	printf("Напишите координаты для окружности x and y, r :\n");
 	scanf("%f%f%f", &x, &y, &r);
 	err(x,y,r);	
-	printf("Координаты вашей окружности: (%f %f, %f)\n", x, y, r);	
+	printf("Координаты вашей окружности: (%.4f %.4f, %.4f)\n", x, y, r);	
 	float pi, P, S;
 	pi = 3.1415;
 	P = 2*pi*r;
